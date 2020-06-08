@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="KM.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <link href="StyleMaster.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="shortcut icon" type="img/png" href="Images/favicon-32x32.png" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+         <div class="navbar">
+        <a class="active" href="Welcome.aspx"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="Registration.aspx"><i class=" fa fa-pencil-square-o"></i> Add</a> 
+        <a href="View.aspx"><i class="fas fa-address-card"></i> View</a> 
+        <%--<a href="#" style="margin-left:875px" ><i class="fas fa-user-circle"></i> Login</a>--%>
+        <a href="#" style="margin-left:975px"><i class="fa fa-sign-out-alt"></i> Log Out</a>
+    </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

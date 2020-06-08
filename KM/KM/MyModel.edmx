@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FULL_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROLES" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="uname" Type="varchar" MaxLength="50" />
+          <Property Name="passwd" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PROJECT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="P1_NAME" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="P1_SKILL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="P1_LEVEL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="P2_NAME" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="P2_SKILL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="P2_LEVEL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="P3_NAME" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="P3_SKILL" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="P3_LEVEL" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SKL5">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SKILL1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LEVEL1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SKILL2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LEVEL2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SKILL3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LEVEL3" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROJECT" EntityType="Self.PROJECT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SKL5" EntityType="Self.SKL5" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EMPLOYEE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FULL_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROLES" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="uname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="passwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PROJECT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P1_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P1_SKILL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P1_LEVEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P2_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P2_SKILL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P2_LEVEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P3_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P3_SKILL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="P3_LEVEL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SKL5">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SKILL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LEVEL1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SKILL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LEVEL2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SKILL3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LEVEL3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+          <EntitySet Name="logins" EntityType="Self.login" />
+          <EntitySet Name="PROJECTs" EntityType="Self.PROJECT" />
+          <EntitySet Name="SKL5" EntityType="Self.SKL5" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="EMPLOYEEs">
+            <EntityTypeMapping TypeName="Database1Model.EMPLOYEE">
+              <MappingFragment StoreEntitySet="EMPLOYEE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FULL_NAME" ColumnName="FULL_NAME" />
+                <ScalarProperty Name="ROLES" ColumnName="ROLES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logins">
+            <EntityTypeMapping TypeName="Database1Model.login">
+              <MappingFragment StoreEntitySet="login">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="uname" ColumnName="uname" />
+                <ScalarProperty Name="passwd" ColumnName="passwd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROJECTs">
+            <EntityTypeMapping TypeName="Database1Model.PROJECT">
+              <MappingFragment StoreEntitySet="PROJECT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="P1_NAME" ColumnName="P1_NAME" />
+                <ScalarProperty Name="P1_SKILL" ColumnName="P1_SKILL" />
+                <ScalarProperty Name="P1_LEVEL" ColumnName="P1_LEVEL" />
+                <ScalarProperty Name="P2_NAME" ColumnName="P2_NAME" />
+                <ScalarProperty Name="P2_SKILL" ColumnName="P2_SKILL" />
+                <ScalarProperty Name="P2_LEVEL" ColumnName="P2_LEVEL" />
+                <ScalarProperty Name="P3_NAME" ColumnName="P3_NAME" />
+                <ScalarProperty Name="P3_SKILL" ColumnName="P3_SKILL" />
+                <ScalarProperty Name="P3_LEVEL" ColumnName="P3_LEVEL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SKL5">
+            <EntityTypeMapping TypeName="Database1Model.SKL5">
+              <MappingFragment StoreEntitySet="SKL5">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SKILL1" ColumnName="SKILL1" />
+                <ScalarProperty Name="LEVEL1" ColumnName="LEVEL1" />
+                <ScalarProperty Name="SKILL2" ColumnName="SKILL2" />
+                <ScalarProperty Name="LEVEL2" ColumnName="LEVEL2" />
+                <ScalarProperty Name="SKILL3" ColumnName="SKILL3" />
+                <ScalarProperty Name="LEVEL3" ColumnName="LEVEL3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
